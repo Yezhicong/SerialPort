@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="10"
+    android:rowCount="8" >
+
+  <TextView
+      android:id="@+id/comNameText1"
+      android:layout_column="0"
+      android:layout_gravity="center"
+      android:layout_row="0"
+      android:text="串    口 :"
+      android:textSize="36dp"
+      android:typeface="serif"/>
+
+  <TextView
+      android:id="@+id/baudText"
+      android:layout_column="0"
+      android:layout_gravity="center"
+      android:layout_row="1"
+      android:text="波特率 :"
+      android:textSize="36dp" />
+
+  <TextView
+      android:id="@+id/dataText"
+      android:layout_column="0"
+      android:layout_gravity="center"
+      android:layout_row="2"
+      android:text="数据位 :"
+      android:textSize="36dp" />
+
+  <TextView
+      android:id="@+id/parityText"
+      android:layout_column="0"
+      android:layout_gravity="center"
+      android:layout_row="3"
+      android:text="校验位 :"
+      android:textSize="36dp" />
+
+  <TextView
+      android:id="@+id/stopText"
+      android:layout_column="0"
+      android:layout_gravity="center"
+      android:layout_row="4"
+      android:text="停止位 :"
+      android:textSize="36dp" />
+
+  <TextView
+      android:id="@+id/loopText"
+      android:layout_column="1"
+      android:layout_gravity="center"
+      android:layout_row="6"
+      android:text="发送间隔"
+      android:textSize="35dp" />
+
+  <Spinner
+      android:id="@+id/nameSpinner"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_column="1"
+      android:layout_gravity="fill"
+      android:layout_row="0"
+      android:entries="@array/portname"
+      android:textSize="48dp" />
+
+  <Spinner
+      android:id="@+id/baudSpinner"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_column="1"
+      android:layout_gravity="fill"
+      android:layout_row="1"
+      android:entries="@array/baud"
+      android:textSize="48dp" />
+
+  <Spinner
+      android:id="@+id/dataSpinner"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_column="1"
+      android:layout_gravity="fill"
+      android:layout_row="2"
+      android:entries="@array/databits"
+      android:textSize="48dp" />
+
+  <Spinner
+      android:id="@+id/paritySpinner"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_column="1"
+      android:layout_gravity="fill"
+      android:layout_row="3"
+      android:entries="@array/parity"
+      android:textSize="48dp" />
+
+  <Spinner
+      android:id="@+id/stopSpinner"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_column="1"
+      android:layout_gravity="fill"
+      android:layout_row="4"
+      android:entries="@array/stopbits"
+      android:textSize="48dp" />
+
+  <EditText
+      android:id="@+id/receiveText"
+      android:layout_column="2"
+      android:layout_columnSpan="6"
+      android:layout_gravity="fill"
+      android:layout_row="0"
+      android:layout_rowSpan="4"
+      android:scrollbars="vertical"
+      android:editable="false"
+      android:gravity="top|left" >
+
+  </EditText>
+
+  <Space />
+
+  <Space />
+
+  <EditText
+      android:id="@+id/sendText"
+      android:layout_column="2"
+      android:layout_columnSpan="6"
+      android:layout_gravity="fill"
+      android:layout_row="4"
+      android:ems="10"
+      android:gravity="top|left" >
+  </EditText>
+
+  <Button
+      android:id="@+id/openButton"
+      android:layout_column="0"
+      android:layout_gravity="fill"
+      android:layout_row="5"
+      android:text="　打开　"
+      android:textSize="35dp" />
+
+  <Button
+      android:id="@+id/closeButton"
+      android:layout_column="1"
+      android:layout_gravity="fill"
+      android:layout_row="5"
+      android:text="　关闭　"
+      android:textSize="35dp" />
+
+  <Button
+      android:id="@+id/sendButton"
+      android:layout_column="6"
+      android:layout_gravity="fill"
+      android:layout_row="5"
+      android:text="　发送　"
+      android:textSize="35dp" />
+  <Button
+     android:id="@+id/clearButton"
+     android:layout_column="7"
+     android:layout_gravity="fill"
+     android:layout_row="5"
+     android:text="　清除　"
+     android:textSize="35dp" />
+
+
+  <Button
+      android:id="@+id/stopButton"
+      android:layout_column="6"
+      android:layout_gravity="fill"
+      android:layout_row="6"
+      android:text="停止"
+      android:textSize="35dp"
+      android:textAllCaps="false"/>
+
+  <Button
+      android:id="@+id/startButton"
+      android:layout_column="7"
+      android:layout_gravity="fill"
+      android:layout_row="6"
+      android:text="计时"
+      android:textSize="35dp"
+      android:textAllCaps="false"/>
+
+  <TextView
+      android:id="@+id/reText"
+      android:layout_column="0"
+      android:layout_columnSpan="2"
+      android:layout_gravity="fill"
+      android:layout_row="7"
+      android:text="R："
+      android:textSize="35dp" />
+
+  <TextView
+      android:id="@+id/seText"
+      android:layout_column="2"
+      android:layout_columnSpan="4"
+      android:layout_gravity="fill"
+      android:layout_row="7"
+      android:text="S："
+      android:textSize="35dp" />
+
+  <EditText
+      android:id="@+id/timeEdit"
+      android:layout_column="2"
+      android:layout_gravity="left|top"
+      android:layout_row="6"
+      android:text="1000"
+      android:ems="4"
+      android:inputType="number"
+      android:textSize="35dp" >
+  </EditText>
+
+  <TextView
+      android:id="@+id/timeText"
+      android:layout_column="5"
+      android:layout_gravity="center"
+      android:layout_row="6"
+      android:text="  毫秒   "
+      android:textSize="38dp" />
+
+  <CheckBox
+      android:id="@+id/checkBox1"
+      android:layout_column="0"
+      android:layout_gravity="center"
+      android:layout_row="6"
+      android:text="循环"
+      android:textSize="36dp" />
+
+  <TextView
+      android:id="@+id/time_text"
+      android:layout_column="6"
+      android:layout_columnSpan="2"
+      android:layout_gravity="fill"
+      android:layout_row="7"
+      android:text="已测:0小时0分"
+      android:textSize="36dp" />
+
+</GridLayout>

@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">SerialPort</string>
+
+    <string-array name="baud">
+        <item>1200</item>
+        <item>2400</item>
+        <item>4800</item>
+        <item>9600</item>
+        <item>19200</item>
+        <item>38400</item>
+        <item>57600</item>
+        <item>115200</item>
+    </string-array>
+
+    <string-array name="stopbits">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="databits">
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+
+    <string-array name="parity">
+        <item>None</item>
+        <item>Odd</item>
+        <item>Even</item>
+        <item>Mark</item>
+        <item>Space</item>
+    </string-array>
+
+    <string-array name="portname">
+        <item>COM1</item>
+        <item>COM2</item>
+        <item>COM3</item>
+        <item>COM4</item>
+        <item>COM5</item>
+    </string-array>
+
+    <string-array name="canbaud">
+        <item>5000</item>
+        <item>10000</item>
+        <item>20000</item>
+        <item>50000</item>
+        <item>100000</item>
+        <item>125000</item>
+        <item>250000</item>
+    </string-array>
+
+</resources>
