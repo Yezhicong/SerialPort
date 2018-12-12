@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import weiqian.hardware.SerialPort;
 import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements  OnClickListener{
     TextView reText, seText, tText;
     CheckBox checkBox;
     boolean flag = false;
-    boolean readflag = true;
+    boolean readflag = false;
     boolean timeflag = false;
     private ReadThread mReadThread;	//读取线程
     private SendThread mSendThread;	//发送线程
@@ -83,9 +84,9 @@ public class MainActivity extends AppCompatActivity implements  OnClickListener{
         sendEdit.setMovementMethod(ScrollingMovementMethod.getInstance());
         receiveEdit.setMaxHeight(baudSpinner.getHeight() * 5 );
         sendEdit.setMaxHeight(baudSpinner.getHeight() * 3 );
-        mReadThread = new ReadThread();
-        readflag =true;
-        mReadThread.start();
+        //mReadThread = new ReadThread();
+        //readflag =true;
+        //mReadThread.start();
     }
 
     //按键处理
@@ -95,6 +96,9 @@ public class MainActivity extends AppCompatActivity implements  OnClickListener{
         switch (v.getId()) {
             case R.id.openButton:
             {
+                mReadThread = new ReadThread();
+                mReadThread.start();
+                readflag =true;
                 openBut.setEnabled(false);
                 closeBut.setEnabled(true);
                 sendBut.setEnabled(true);
@@ -120,6 +124,7 @@ public class MainActivity extends AppCompatActivity implements  OnClickListener{
                 stopBut.setEnabled(false);
                 startBut.setEnabled(false);
                 timeflag = false;
+                readflag = false;
                 timeM = 0;
                 timeH = 0;
                 builder.delete(0, builder.length());
@@ -191,6 +196,7 @@ public class MainActivity extends AppCompatActivity implements  OnClickListener{
                     onDataReceived(buff);
                     num++;
                 }
+                Log.d("MainActivity", "return : " + n);
             }
         }
     }
